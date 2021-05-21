@@ -1,0 +1,39 @@
+﻿@model List<Cadastro.Models.Registro>
+@{
+    ViewData["Title"] = "Registros Cadastrados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Registros Cadastros</h2>
+
+    <div class="row">
+        <div class="col-md-12 bg-light text-right">
+            @Html.ActionLink("Novo", "Create", new { controller = "Contato" }, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+    <table class="table">
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Cidade</th>
+        </tr>
+        <tbody>
+            @foreach (var registro in Model)
+            {
+            <tr>
+                <th>@registro.Nome</th>
+                <th>@registro.Email</th>
+                <th>@Convert.ToInt64(registro.Telefone).ToString("(##) #####-####")</th>
+                <th>@registro.Endereco</th>
+                <th>@registro.Cidade</th>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+</script>

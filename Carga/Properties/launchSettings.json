@@ -1,0 +1,30 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:9329",
+      "sslPort": 44312
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "commandLineArgs": "\"Data Source=Note_Alexandre\\SQLEXPRESS;Initial Catalog=TesteDB;Integrated Security=True;Pooling=False;\"",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Carga": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Data Source=Note_Alexandre\\SQLEXPRESS;Initial Catalog=TesteDB;Integrated Security=True;Pooling=False;\"",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": "true",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    }
+  }
+}

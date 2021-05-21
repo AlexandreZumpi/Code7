@@ -1,0 +1,56 @@
+﻿@model Cadastro.Models.Registro
+
+@{
+    ViewData["Title"] = "Cadastro de contatos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CADASTRO DE CONTATOS</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Nome" class="control-label"></label>
+                <input asp-for="@Model.Nome" class="form-control" />
+                <span asp-validation-for="@Model.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Email" class="control-label"></label>
+                <input asp-for="@Model.Email" class="form-control" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Telefone" class="control-label"></label>
+                <input asp-for="@Model.Telefone" class="form-control" />
+                <span asp-validation-for="@Model.Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Endereco" class="control-label"></label>
+                <input asp-for="@Model.Endereco" class="form-control" />
+                <span asp-validation-for="@Model.Endereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Cidade" class="control-label"></label>
+                <input asp-for="@Model.Cidade" class="form-control" />
+                <span asp-validation-for="@Model.Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12 bg-light">
+                        <a asp-action="Index">Retornar</a>
+                        @Html.ActionLink("LIMPAR", "Create", new { controller = "Contato" }, new { @class = "btn btn-danger float-right" })
+                        <input type="submit" value="SALVAR" class="btn btn-success float-right" style="margin-right: 10px;" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
